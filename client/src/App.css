@@ -1,0 +1,139 @@
+/* === Global Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html, #root {
+  width: 100%;
+  height: 100%;
+  background-color: #121212; /* dark background */
+  font-family: Arial, sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* === Join Screen === */
+.join-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.join-container input {
+  padding: 10px;
+  margin-bottom: 12px;
+  width: 250px;
+  border-radius: 6px;
+  border: none;
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.join-container input::placeholder {
+  color: #aaa;
+}
+
+.join-container button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #24252b;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.join-container button:hover {
+  background-color: #3a3b42;
+}
+
+/* === Local Video === */
+.local-video-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.local-video {
+  width: 300px;
+  border-radius: 12px;
+  background: #000;
+  object-fit: cover;
+}
+
+/* === Controls === */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.controls button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+/* === Remote Videos === */
+.remote-videos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  margin-left: 20px;
+  max-width: calc(100% - 250px); /* leave space for participants sidebar */
+}
+
+.remote-video {
+  width: 300px;
+  border-radius: 12px;
+  background: #000;
+  object-fit: cover;
+}
+
+/* === Participants Sidebar === */
+.participants {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 220px;
+  background: #1e1e1e;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  height: calc(100vh - 40px);
+  overflow-y: auto;
+}
+
+.participants h3 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.participants ul {
+  list-style: none;
+  padding: 0;
+}
+
+.participants li {
+  background: #2a2a2a;
+  color: #fff;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+}
